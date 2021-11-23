@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Kaushan+Script&family=Lobster&display=swap");
+.App {
+  text-align: center;
+  font-style: italic;
+  font-weight: bolder;
+  font-family: sans-serif;
+  font-size: large;
+  color: rgb(11, 12, 12);
+  height: 100%;
+  margin-top: 10px;
+}
+div#root {
+  height: 100%;
+}
+body {
+  height: 70vw;
+}
+.App-link {
+  color: #61dafb;
+}
+
+h1 {
+  font-size: 100px;
+  margin: -0.2rem;
+  font-family: "Kaushan Script", cursive;
+}
+img {
+  width: 500px;
+  height: 500px;
+  padding: 0.6rem;
+}
+
+a {
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+form input {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  border-radius: 0.8rem;
+  background-color: rgb(223, 211, 211);
+  margin: 10px;
+}
+
+.imgBody {
+  display: inline-block;
+  margin-block: 1rem;
+  padding: 0.2rem;
+  border-style: groove;
+  background-color: rgba(21, 162, 172, 0.2);
+  border-radius: 0.9rem;
+}
+
+.atras {
+  position: relative;
+  left: -350px;
+}
+
+ul {
+  justify-content: center;
+  margin-left: -40px;
+}
+
+.infoProfile {
+  font-size: 12px;
+  position: relative;
+  display: inline-block;
+  top: 5rem;
+  left: -15rem;
+  margin-bottom: 5rem;
+  background-color: rgba(21, 162, 172, 0.2);
+  padding: 0.1rem;
+  border-radius: 0.9rem;
+}
+
+.profileImg {
+  width: 100px;
+  height: 100px;
+}
+
+.button {
+  position: relative;
+  left: 120px;
+  bottom: 220px;
+}
+
+.like {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: -100px;
+  left: 220px;
+}
+
+.commentaries {
+  display: inline-block;
+  position: relative;
+  left: 20px;
+  top: -80px;
+  padding: 0.2rem;
+  border: solid 1px black;
+  background-color: rgba(21, 162, 172, 0.2);
+  border-radius: 0.9rem;
+}
+
+.entry {
+  background-color: white;
+  padding: 0.2rem;
+  border: solid 1px black;
+  border-radius: 00.9rem;
+}
+
+.profile {
+  position: relative;
+  left: 10px;
+  margin-bottom: 10px;
+}
+
+.likestext {
+  position: relative;
+  top: -100px;
+  left: 210px;
+}
+
+.likeerror {
+  position: relative;
+  left: 150px;
+  top: -80px;
+  color: red;
+}
+
+.commentstext {
+  position: relative;
+  top: -50px;
+}
+
+.defaultProfile {
+  font-size: 12px;
+  position: relative;
+  display: inline-block;
+  top: 5rem;
+  left: -15rem;
+  margin-bottom: 5rem;
+  background-color: rgba(21, 162, 172, 0.2);
+  padding: 0.1rem;
+  border-radius: 0.8rem;
+}
+
+input:not(.search) {
+  font-size: small;
+}
+form:not(.searchPhoto) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  margin-top: 10px;
+}
+footer {
+  height: 50px;
+  background-color: rgb(21, 162, 172, 0.2);
+}
+.formComent {
+  position: relative;
+  bottom: 100px;
+}
+
+.divRegister {
+  height: 93%;
+}
+
+.atras2{
+position:relative;
+left: -350px;
+}
+
+.delete{
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: -100px;
+  left: 200px;
+}

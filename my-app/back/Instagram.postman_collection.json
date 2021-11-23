@@ -1,0 +1,490 @@
+{
+	"info": {
+		"_postman_id": "0d0adba3-e1d8-405d-a459-090607b83fff",
+		"name": "Instagram",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"sisifed221@brayy.com\",\n    \"password\" : \"12345\",\n    \"confirmPassword\" : \"12345\",\n    \"name\" : \"wegisdfsdr\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}user",
+							"host": [
+								"{{URL}}user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loginUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"sisifed221@brayy.com\",\n    \"password\" : \"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}login",
+							"host": [
+								"{{URL}}login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}user/3",
+							"host": [
+								"{{URL}}user"
+							],
+							"path": [
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6Im5vcm1hbCIsImlhdCI6MTYyMTI0NDI2NiwiZXhwIjoxNjIzODM2MjY2fQ.PRdp_SGJDVra5161CWCjshjBigiEqPDQLqlw6pSJlAg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "picture",
+									"type": "file",
+									"src": "/home/hacker/Documents/blanca-cacerenasad-gal4.jpg"
+								},
+								{
+									"key": "name",
+									"value": "Claudia",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "Rodriguez",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "refogam239@firmjam.com",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "estudiante",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}user/4",
+							"host": [
+								"{{URL}}user"
+							],
+							"path": [
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editPassword",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6Im5vcm1hbCIsImlhdCI6MTYyMTI0NDI2NiwiZXhwIjoxNjIzODM2MjY2fQ.PRdp_SGJDVra5161CWCjshjBigiEqPDQLqlw6pSJlAg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"oldPassword\" : \"12345\",\n    \"newPassword\" : \"123456\",\n    \"newPassword2\" : \"123456\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}user/password/4",
+							"host": [
+								"{{URL}}user"
+							],
+							"path": [
+								"password",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mailReset",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"refogam239@firmjam.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}recoverPassword",
+							"host": [
+								"{{URL}}recoverPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetPassword",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\" : \"1234567\",\n    \"confirmPassword\" : \"1234567\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}reset/ab446acc5ee839f54cc0",
+							"host": [
+								"{{URL}}reset"
+							],
+							"path": [
+								"ab446acc5ee839f54cc0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6Im5vcm1hbCIsImlhdCI6MTYyMTI0NDI2NiwiZXhwIjoxNjIzODM2MjY2fQ.PRdp_SGJDVra5161CWCjshjBigiEqPDQLqlw6pSJlAg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}user/4",
+							"host": [
+								"{{URL}}user"
+							],
+							"path": [
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Photos",
+			"item": [
+				{
+					"name": "Post photo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6Im5vcm1hbCIsImlhdCI6MTYyMTc4MzQyOSwiZXhwIjoxNjI0Mzc1NDI5fQ._V3PSAZ2qokua4p5l3MIxm9uoYv-c4uanLw5CDX9Vns",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/home/hacker/mis cosas/mod1-html/dia-2/media/img/813cc6af-fe7a-4995-9268-15303ebfca91_alta-libre-aspect-ratio_default_0.jpg"
+								},
+								{
+									"key": "description",
+									"value": "nuevo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}photos/photo",
+							"host": [
+								"{{URL}}photos"
+							],
+							"path": [
+								"photo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post photo grey",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6Im5vcm1hbCIsImlhdCI6MTYyMTc5NDE3NSwiZXhwIjoxNjI0Mzg2MTc1fQ.Uks8rxGqt-nRTd-gGV7_k4PPRXrpjj8iN_ZI1mNVNZA"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/home/hacker/mis cosas/mod1-html/dia-2/media/img/813cc6af-fe7a-4995-9268-15303ebfca91_alta-libre-aspect-ratio_default_0.jpg"
+								},
+								{
+									"key": "description",
+									"value": "nuevo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}photos/photoGrey",
+							"host": [
+								"{{URL}}photos"
+							],
+							"path": [
+								"photoGrey"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ver foto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}photos/1",
+							"host": [
+								"{{URL}}photos"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar fotos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "search",
+									"value": "nuevo",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}photos/?search=nuevo",
+							"host": [
+								"{{URL}}photos"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "nuevo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editGreyScale",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6Im5vcm1hbCIsImlhdCI6MTYyMTc5NDE3NSwiZXhwIjoxNjI0Mzg2MTc1fQ.Uks8rxGqt-nRTd-gGV7_k4PPRXrpjj8iN_ZI1mNVNZA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}grey/1",
+							"host": [
+								"{{URL}}grey"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "comentario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6Im5vcm1hbCIsImlhdCI6MTYyMTc2NTIxMSwiZXhwIjoxNjI0MzU3MjExfQ.LiCdupBwwp04KbNx5ess75F80v3lrslbW6RvXIARZAU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"comment\" : \"HELLO GUYS\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}photo/1/comment",
+							"host": [
+								"{{URL}}photo"
+							],
+							"path": [
+								"1",
+								"comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Like",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6Im5vcm1hbCIsImlhdCI6MTYyMTc2NTIxMSwiZXhwIjoxNjI0MzU3MjExfQ.LiCdupBwwp04KbNx5ess75F80v3lrslbW6RvXIARZAU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"like\" : \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}photos/4/addLike",
+							"host": [
+								"{{URL}}photos"
+							],
+							"path": [
+								"4",
+								"addLike"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar una foto",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6Im5vcm1hbCIsImlhdCI6MTYyMTc5NDE3NSwiZXhwIjoxNjI0Mzg2MTc1fQ.Uks8rxGqt-nRTd-gGV7_k4PPRXrpjj8iN_ZI1mNVNZA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}photos/delete/4",
+							"host": [
+								"{{URL}}photos"
+							],
+							"path": [
+								"delete",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
